@@ -67,9 +67,6 @@ How models actually improve. Gradient Descent is the "engine" of AI training.
 * **Notebook:** [PyTorch Autograd Tutorial](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html) – A hands-on look at how automatic differentiation (the core of loss optimization) works.
 
 
-This section is the "Heavy Lifting" phase. Here, we move from understanding the math to building the actual architectures that power modern AI.
-
-
 ### Core Models 
 
 #### **Large Language Models (LLMs)**
