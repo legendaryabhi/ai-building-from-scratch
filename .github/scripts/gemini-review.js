@@ -20,7 +20,7 @@ const GEMINI_KEYS = Object.entries(process.env)
   .filter(Boolean);
 
 if (GEMINI_KEYS.length === 0) {
-  console.error("❌ No Gemini API keys found");
+  console.error("No Gemini API keys found");
   process.exit(1);
 }
 
