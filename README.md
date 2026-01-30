@@ -323,6 +323,7 @@ Notebooks are the **lab bench for agents** — perfect for inspecting reasoning,
 *Concept:* Named after Ralph Wiggum from *The Simpsons*, this technique emphasizes **brute-force persistence** over single-shot perfection. It is a "Bash Loop" pattern for coding agents: the AI is given a task and a test suite, and it is forced to iterate (Write → Test → Fail → Fix) until the code actually works.
 
 * **GitHub:** [snarktank/ralph](https://github.com/snarktank/ralph) – An autonomous AI agent loop that wraps tools like **Claude Code** or **Amp** to repeatedly attempt tasks until all PRD items pass.
+* **Github:** [Frank Bria's ralph-claude-code](https://github.com/frankbria/ralph-claude-code) - Autonomous AI development loop for Claude Code with intelligent exit detection
 * **Article:** [The Ralph Wiggum Technique: Iteration > Perfection](https://www.ishir.com/blog/312751/ralph-wiggum-and-ai-coding-loops-from-springfield-to-real-world-software-automation.htm) – Explains the core philosophy of "Backpressure" where test failures are treated as valuable data for the next iteration.
 * **Guide:** [How to Ralph Wiggum](https://github.com/ghuntley/how-to-ralph-wiggum) – Geoffrey Huntley’s original "pattern" for reducing software development costs using autonomous, iterative loops.
 * **YouTube:** [Building the Ralph Coding Loop](https://www.youtube.com/watch?v=_IK18goX4X8) – A demonstration of how to implement a self-referential feedback loop where the agent autonomously improves by reading its own git history and test logs.
