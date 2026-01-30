@@ -102,17 +102,30 @@ async function checkLink(url) {
     const controller = new AbortController();
     setTimeout(() => controller.abort(), LINK_TIMEOUT_MS);
 
-    const res = await fetch(url, {
-      method: "HEAD",
+    // GitHub blocks HEAD — use GET directly
+    const method = url.includes("github.com") ? "GET" : "HEAD";
+
+    let res = await fetch(url, {
+      method,
       redirect: "follow",
       signal: controller.signal
     });
+
+    // If HEAD failed, fallback to GET
+    if (res.status >= 400 && method === "HEAD") {
+      res = await fetch(url, {
+        method: "GET",
+        redirect: "follow",
+        signal: controller.signal
+      });
+    }
 
     return res.status >= 200 && res.status < 400;
   } catch {
     return false;
   }
 }
+
 
 async function validateLinks() {
   const results = await Promise.all(
