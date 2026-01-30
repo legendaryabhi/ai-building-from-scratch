@@ -14,7 +14,6 @@ const { execSync } = require("child_process");
 const SCORE_TO_MERGE = 8;
 const MODEL = "gemini-1.5-flash";
 const LINK_TIMEOUT_MS = 8000;
-// ----------------------------
 
 
 
