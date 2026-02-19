@@ -25,9 +25,11 @@ This repo is a collection of How AI systems are built from core foundations to m
 _Concept:_ OpenClaw (often stylized with the lobster emoji) is a proactive, local-first AI assistant. Unlike typical bots that wait for you to prompt them, Clawdbot runs 24/7 on your hardware and messages you first via WhatsApp, Telegram, or Discord.
 
 - **GitHub:** [openclaw/openclaw](https://github.com/openclaw/openclaw) – The official repository. A "Claude with hands" that manages your email, calendar, and system files.
-- Visit Site [here](https://openclaw.ai)
+- Visit OpenClaw [here](https://openclaw.ai)
 - [Documentation](https://docs.openclaw.ai/start/getting-started)
 
+
+### **2. NanoBot: Lightweight version of OpenClaw
 [NanoBot](https://www.nanobot.ai) - An Open Source framework for building MCP agents—complete with reasoning, system prompts, tool orchestration, and rich MCP-UI support.
 
 ### AI Agents
