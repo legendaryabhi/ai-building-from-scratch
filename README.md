@@ -37,8 +37,8 @@ _Concept:_ OpenClaw (often stylized with the lobster emoji) is a proactive, loca
 Before agents can "think," they need a way to interact with the world. The simplest agent is a CLI tool that parses natural language into command arguments.
 
 - **GitHub:** [simonw/llm](https://github.com/simonw/llm) – The definitive CLI tool for interacting with LLMs. Study how it handles piping (`cat file.txt | llm "summarize"`) and plugin systems.
-- **Article:** [Building a CLI Agent with Python](https://www.google.com/search?q=https://simonwillison.net/2023/May/2/llm-cli/) – Simon Willison explains how to treat LLMs as Unix command-line tools. This is essential for understanding how agents can fit into existing developer workflows.
-- **YouTube:** [Build a CLI Chatbot with Python & Typer](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3DIVwZs5493yA) – Shows how to build the "frontend" of your agent using `Typer`, which is the industry standard for Python CLIs.
+- **Article:** [Building a CLI Agent with Python](https://simonwillison.net/2023/May/2/llm-cli/) – Simon Willison explains how to treat LLMs as Unix command-line tools. This is essential for understanding how agents can fit into existing developer workflows.
+- **YouTube:** [Build a CLI Chatbot with Python & Typer](https://www.youtube.com/watch?v=IVwZs5493yA) – Shows how to build the "frontend" of your agent using `Typer`, which is the industry standard for Python CLIs.
 - **Notebook:** [Command Line Assistant](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_call_functions_with_chat_models.ipynb) – OpenAI's cookbook on using "Function Calling" to turn natural language into CLI commands.
 
 #### **2. AI Agents (Reasoning & Loops)**
@@ -55,17 +55,17 @@ This is the core logic: The "ReAct" loop (Reason + Act) where the model pauses, 
 Running an agent on a server requires managing long-running tasks. You can't just let an API request "hang" while the agent thinks for 2 minutes.
 
 - **GitHub:** [tiangolo/fastapi](https://github.com/tiangolo/fastapi) – You need to learn FastAPI to serve agents. Focus on the "Background Tasks" section of the docs.
-- **Article:** [How to Deploy AI Agents to Production](https://www.google.com/search?q=https://eugeneyan.com/writing/llm-patterns/%23level-3-agents) – Eugene Yan’s guide on the architecture of agent systems: Job Queues, State Persistence, and Failure Recovery.
-- **YouTube:** [Asynchronous Task Queues (Celery + Redis)](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3DTHxCy-6Enns) – Agents are slow. This tutorial teaches the architecture (Queue → Worker) needed to run agents without timing out your server.
+- **Article:** [How to Deploy AI Agents to Production](https://eugeneyan.com/writing/llm-patterns/#level-3-agents) – Eugene Yan’s guide on the architecture of agent systems: Job Queues, State Persistence, and Failure Recovery.
+- **YouTube:** [Asynchronous Task Queues (Celery + Redis)](https://www.youtube.com/watch?v=THxCy-6Enns) – Agents are slow. This tutorial teaches the architecture (Queue → Worker) needed to run agents without timing out your server.
 - **Concept:** **Webhooks**. Your agent needs to "call back" your frontend when it finishes a task. Research "Webhooks in Python" to understand this pattern.
 
 #### **4. Multi-Agent Systems (Orchestration)**
 
 How to make two agents talk to each other without them getting stuck in an infinite loop of "Hello" "Hi".
 
-- **GitHub:** [scrapegraphai/ScrapeGraphAI](https://www.google.com/search?q=https://github.com/VinciGit00/ScrapeGraphAI) – A library that uses a graph of agents to scrape websites. The code is readable and shows how to pass state between a "Fetcher Agent" and a "Summary Agent."
+- **GitHub:** [scrapegraphai/ScrapeGraphAI](https://github.com/VinciGit00/ScrapeGraphAI) – A library that uses a graph of agents to scrape websites. The code is readable and shows how to pass state between a "Fetcher Agent" and a "Summary Agent."
 - **Article:** [How to Create Multi-Agent Systems Without Frameworks](https://scrapegraphai.com/blog/how-to-create-agent-without-frameworks) – A brilliant tutorial that builds a "Researcher" and "Analyst" agent using raw Python/OpenAI calls, explicitly avoiding LangGraph/CrewAI.
-- **YouTube:** [Multi-Agent Collaboration with AutoGen](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3D1yv-u9Jv8CQ) – Andrew Ng’s breakdown of _Conversation Patterns_ (Sequential vs. Hierarchical chat).
+- **YouTube:** [Multi-Agent Collaboration with AutoGen](https://www.youtube.com/watch?v=1yv-u9Jv8CQ) – Andrew Ng’s breakdown of _Conversation Patterns_ (Sequential vs. Hierarchical chat).
 - **Notebook:** [Camel Role-Playing](https://github.com/camel-ai/camel/blob/master/examples/ai_society/role_playing.py) – One of the first papers on multi-agent roleplay. The code shows how to prompt-engineer "Inception" (getting agents to instruct each other).
 
 #### **5. Autonomous Agents (Self-Directed)**
@@ -73,8 +73,8 @@ How to make two agents talk to each other without them getting stuck in an infin
 Agents that create their own tasks. This is the logic behind "BabyAGI" and "AutoGPT."
 
 - **GitHub:** [yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi) – The original 100-line script. It is the cleanest implementation of the `Task Creation` → `Task Prioritization` → `Execution` loop.
-- **Article:** [AutoGPT Logic Explained](https://www.google.com/search?q=https://pbs.twimg.com/media/Ftqlb_aXwAIsF9i%3Fformat%3Djpg%26name%3Dlarge) – (Image/Diagram) Visualizing the infinite loop of an autonomous agent.
-- **YouTube:** [Building an Autonomous Agent in Python](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3D5qQHHccrOGs) – Explains the "stack" data structure used to manage the agent's todo list.
+- **Article:** [AutoGPT Logic Explained](https://pbs.twimg.com/media/Ftqlb_aXwAIsF9i?format=jpg&name=large) – (Image/Diagram) Visualizing the infinite loop of an autonomous agent.
+- **YouTube:** [Building an Autonomous Agent in Python](https://www.youtube.com/watch?v=5qQHHccrOGs) – Explains the "stack" data structure used to manage the agent's todo list.
 - **Project:** Build a script that takes a goal ("Research the history of pizza"), breaks it into 3 sub-tasks, executes them, and writes a report to a file.
 
 #### **6. Agent Evaluation (Safety & Metrics)**
@@ -82,8 +82,8 @@ Agents that create their own tasks. This is the logic behind "BabyAGI" and "Auto
 How do you know if your agent is stuck in a loop or hallucinating?
 
 - **GitHub:** [ukgovernmentbeis/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) – An evaluation framework by the UK AI Safety Institute. It’s code-heavy but shows the standard for testing agent safety and capability.
-- **Article:** [Evaluation of LLM Agents](https://www.google.com/search?q=https://huyenchip.com/2023/04/11/llm-engineering.html%23eval) – Chip Huyen explains why "Unit Tests" don't work for agents and introduces "Evals" (using an LLM to grade another LLM).
-- **YouTube:** [Eval Driven Development](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3D4W1t8e3q7f4) – Teaches you to write the "Test Case" (e.g., "Did the agent actually book the flight?") _before_ you write the agent.
+- **Article:** [Evaluation of LLM Agents](https://huyenchip.com/2023/04/11/llm-engineering.html#eval) – Chip Huyen explains why "Unit Tests" don't work for agents and introduces "Evals" (using an LLM to grade another LLM).
+- **YouTube:** [Eval Driven Development](https://www.youtube.com/watch?v=4W1t8e3q7f4) – Teaches you to write the "Test Case" (e.g., "Did the agent actually book the flight?") _before_ you write the agent.
 - **Metric:** **Pass@k**. If you run your agent 10 times on the same task, how many times does it succeed? This is the only metric that matters for agents.
 
 ### Developer Tools / AI IDEs
@@ -150,7 +150,7 @@ Notebooks are the **lab bench for agents** — perfect for inspecting reasoning,
 Before you can search, you must turn text into numbers. Understanding _how_ these vectors capture meaning is the first step.
 
 - **Article:** [The Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/) – Jay Alammar again. This is the visual bible for understanding how words become vectors.
-- **GitHub:** [nicolas-ivanov/tf_word2vec](https://www.google.com/search?q=https://github.com/nicolas-ivanov/tf_word2vec) – A clean, no-nonsense implementation of Word2Vec using basic TensorFlow/Python. It helps you see the "skip-gram" logic.
+- **GitHub:** [nicolas-ivanov/tf_word2vec](https://github.com/nicolas-ivanov/tf_word2vec) – A clean, no-nonsense implementation of Word2Vec using basic TensorFlow/Python. It helps you see the "skip-gram" logic.
 - **Notebook:** [Word Embeddings from Scratch](https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html) – PyTorch's official tutorial on implementing N-Gram language modeling to generate embeddings.
 
 #### Similarity Search & Vector Databases
@@ -175,7 +175,7 @@ How to make an AI "remember" a conversation from yesterday.
 
 - **Research Paper:** [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) – The famous "Smallville" paper. Section 3 ("Agent Architecture") is the **gold standard** for designing a memory stream (Recency, Importance, Relevance).
 - **GitHub:** [joonspk-research/generative_agents](https://github.com/joonspk-research/generative_agents) – The official code for the paper above. Look at `memory.py` to see how they score memories to decide what to retrieve.
-- **Article:** [Memory in LLM Agents](https://www.google.com/search?q=https://www.promptingguide.ai/research/llm-agents%23memory) – A concise breakdown of Short-term (Context) vs Long-term (Vector DB) memory.
+- **Article:** [Memory in LLM Agents](https://www.promptingguide.ai/research/llm-agents#memory) – A concise breakdown of Short-term (Context) vs Long-term (Vector DB) memory.
 
 #### Long Context / Attention Scaling
 
@@ -183,7 +183,7 @@ How do we make models read entire books? You need better positional embeddings t
 
 - **Article (RoPE):** [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) – RoPE is used in Llama, GPT-NeoX, and PaLM. This article explains the complex number rotation math intuitively.
 - **GitHub:** [lucidrains/rotary-embedding-torch](https://github.com/lucidrains/rotary-embedding-torch) – A standalone, copy-pasteable implementation of RoPE.
-- **Article (ALiBi):** [ALiBi: Train Short, Test Long](https://www.google.com/search?q=https://ofir.io/train_short_test_long.html) – Explains how to bias attention based on distance, allowing models to handle longer text than they were trained on.
+- **Article (ALiBi):** [ALiBi: Train Short, Test Long](https://ofir.io/train_short_test_long.html) – Explains how to bias attention based on distance, allowing models to handle longer text than they were trained on.
 
 ### Core Models
 
@@ -195,7 +195,7 @@ From counting words to predicting the future. This is the progression from simpl
 
 - **GitHub:** [karpathy/makemore](https://github.com/karpathy/makemore) – The absolute gold standard. It starts with a Bigram model and evolves into an MLP, RNN, and LSTM.
 - **Article:** [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) – A classic read that predates Transformers but explains _why_ language modeling works.
-- **Notebook:** [Building a Bigram Language Model](https://www.google.com/search?q=https://www.kaggle.com/code/prashant111/bag-of-words-bigram-model) – A simple, hands-on Kaggle notebook for understanding word probabilities.
+- **Notebook:** [Building a Bigram Language Model](https://www.kaggle.com/code/prashant111/bag-of-words-bigram-model) – A simple, hands-on Kaggle notebook for understanding word probabilities.
 
 #### **Mini GPT / Transformers**
 
@@ -206,7 +206,7 @@ From counting words to predicting the future. This is the progression from simpl
 #### **Inference Loops (KV Cache)**
 
 - **Article:** [Transformer Inference Arithmetic](https://kipp.ly/transformer-inference-arithmetic/) – Explains the math of inference (KV caching, memory bandwidth) which is critical for making your model fast.
-- **GitHub:** [calvin-mccoy/transformer-inference](https://www.google.com/search?q=https://github.com/calvin-mccoy/transformer-inference) – A minimal implementation focused specifically on the sampling loop and KV-caching.
+- **GitHub:** [calvin-mccoy/transformer-inference](https://github.com/calvin-mccoy/transformer-inference) – A minimal implementation focused specifically on the sampling loop and KV-caching.
 
 #### **Code Models / Completion Models**
 
@@ -233,7 +233,7 @@ Connecting text to pixels and audio waveforms.
 #### **Text + Image (CLIP)**
 
 - **GitHub:** [moein-shariatnia/OpenAI-CLIP](https://github.com/moein-shariatnia/OpenAI-CLIP) – A dedicated repository that recreates the CLIP training loop (matching images to text captions) from scratch.
-- **Article:** [Simple Implementation of OpenAI CLIP](https://www.google.com/search?q=https://towardsdatascience.com/simple-implementation-of-openai-clip-model-a-computational-perspective-2f35284212e6) – Walks through the "Contrastive Loss" function, which is the magic glue between text and images.
+- **Article:** [Simple Implementation of OpenAI CLIP](https://towardsdatascience.com/simple-implementation-of-openai-clip-model-a-computational-perspective-2f35284212e6) – Walks through the "Contrastive Loss" function, which is the magic glue between text and images.
 
 #### **Generative Models**
 
@@ -242,7 +242,7 @@ The "Creative" side of AI.
 #### **GANs (Generative Adversarial Networks)**
 
 - **GitHub:** [eriklindernoren/PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN) – Single-file implementations of almost every GAN variant (DCGAN, CycleGAN, Pix2Pix).
-- **YouTube:** [Build a GAN in 10 Minutes](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3DO1sGR_XqsYs) – A rapid-fire simplified guide to the generator-discriminator game.
+- **YouTube:** [Build a GAN in 10 Minutes](https://www.youtube.com/watch?v=O1sGR_XqsYs) – A rapid-fire simplified guide to the generator-discriminator game.
 
 #### **VAEs (Variational Autoencoders)**
 
@@ -264,7 +264,7 @@ The "logic" of AI. You need to understand how data is transformed and how "learn
 - **GitHub:** [dair-ai/Mathematics-for-ML](https://github.com/dair-ai/Mathematics-for-ML) – A massive, community-curated collection of papers and notes for AI math.
 - **Article:** [The Matrix Calculus You Need for Deep Learning](https://explained.ai/matrix-calculus/) – A brilliant, visual guide by Jeremy Howard and Terence Parr that bridges the gap between simple calculus and neural networks.
 - **YouTube:** [3Blue1Brown – Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) – The absolute best visual intuition for vectors and matrices.
-- **Notebook:** [Mathematics for Machine Learning (DeepLearning.AI)](https://www.google.com/search?q=https://github.com/m-bashari/Mathematics-for-Machine-Learning-and-Data-Science-Specialization) – Lab notebooks that apply linear algebra and calculus using Python/NumPy.
+- **Notebook:** [Mathematics for Machine Learning (DeepLearning.AI)](https://github.com/m-bashari/Mathematics-for-Machine-Learning-and-Data-Science-Specialization) – Lab notebooks that apply linear algebra and calculus using Python/NumPy.
 
 #### **Programming Basics**
 
@@ -272,7 +272,7 @@ While Python is the industry standard, seeing AI concepts in JavaScript or pseud
 
 - **GitHub:** [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) – Python implementations of popular ML algorithms with clear, step-by-step explanations.
 - **Article:** [Python for Beginners (Real Python)](https://realpython.com/python-first-steps/) – Deep dives into data types and loops, specifically the "Pythonic" way.
-- **YouTube:** [The Coding Train – Intelligence and Learning](https://www.google.com/search?q=https://www.youtube.com/playlist%3Flist%3DPLRqwX-V7Uu6Y7VfR-vS4Wp0f9uN16t5-u) – Daniel Shiffman builds simple neural networks and genetic algorithms from scratch using **JavaScript (p5.js)**.
+- **YouTube:** [The Coding Train – Intelligence and Learning](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Y7VfR-vS4Wp0f9uN16t5-u) – Daniel Shiffman builds simple neural networks and genetic algorithms from scratch using **JavaScript (p5.js)**.
 - **Notebook:** [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook) – Interactive notebooks covering everything from NumPy arrays to basic plotting.
 
 #### **Data Structures & Algorithms**
@@ -281,7 +281,7 @@ AI is essentially a series of search and optimization problems on complex data s
 
 - **GitHub:** [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) – The largest open-source resource for learning how to code every algorithm imaginable from scratch.
 - **Article:** [Introduction to A\* Search](https://www.redblobgames.com/pathfinding/a-star/introduction.html) – The best interactive article on graph search and heuristics.
-- **YouTube:** [MIT 6.006 – Introduction to Algorithms](https://www.google.com/search?q=https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video-lectures/) – Classic academic rigor for understanding trees, heaps, and graphs.
+- **YouTube:** [MIT 6.006 – Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video-lectures/) – Classic academic rigor for understanding trees, heaps, and graphs.
 - **Notebook:** [Algorithms in Jupyter](https://github.com/aimacode/aima-python) – Implementations for "Artificial Intelligence: A Modern Approach" (the definitive AI textbook).
 
 #### **Foundations of Machine Learning**
@@ -291,7 +291,7 @@ This is the "Transformer era" toolkit. Modern AI lives and dies by how it repres
 - **GitHub:** [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) – The cleanest, most educational implementation of a GPT-style Transformer in about 300 lines of PyTorch.
 - **Article:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) – Jay Alammar’s legendary visual breakdown of attention and embeddings.
 - **YouTube:** [Andrej Karpathy – Let's build GPT: from scratch, in code](https://www.youtube.com/watch?v=kCc8FmEb1nY) – A 2-hour masterclass that builds a Transformer from a blank file.
-- **Notebook:** [Transformers from Scratch (Peter Bloem)](https://www.google.com/search?q=https://github.com/pbloem/transformers) – A minimal, clear PyTorch implementation of the "Attention is All You Need" architecture.
+- **Notebook:** [Transformers from Scratch (Peter Bloem)](https://github.com/pbloem/transformers) – A minimal, clear PyTorch implementation of the "Attention is All You Need" architecture.
 
 #### **Optional Extras (Optimization)**
 
